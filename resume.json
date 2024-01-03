@@ -2,11 +2,11 @@
   "basics": {
     "name": "John Doe",
     "label": "Programmer",
-    "image": "",
+    "image": "https://cdn.jsdelivr.net/gh/alohe/memojis/png/notion_2.png",
     "email": "john@gmail.com",
     "phone": "(912) 555-4321",
     "url": "https://johndoe.com",
-    "summary": "A summary of John Doe…",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus in hendrerit gravida rutrum. Blandit turpis cursus in hac habitasse platea dictumst quisque. Arcu cursus euismod quis viverra. Urna et pharetra pharetra massa massa ultricies mi quis. Egestas dui id ornare arcu odio ut sem. Amet porttitor eget dolor morbi. Imperdiet sed euismod nisi porta lorem mollis. Eget mauris pharetra et ultrices neque. At volutpat diam ut venenatis tellus.",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
@@ -18,6 +18,14 @@
       "network": "Twitter",
       "username": "john",
       "url": "https://twitter.com/john"
+    },{
+      "network": "LinkedIn",
+      "username": "john",
+      "url": "https://www.linkedin.com/in/john/"
+    },{
+      "network": "Github",
+      "username": "john",
+      "url": "https://www.github.com/john/"
     }]
   },
   "work": [{
