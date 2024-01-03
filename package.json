@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "description": "Simple theme for JSON Resume.",
   "scripts": {
+    "serve": "resume serve --theme .",
+    "tailwind:watch": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
