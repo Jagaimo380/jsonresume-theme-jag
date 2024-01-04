@@ -4,19 +4,27 @@
 
 <div class="w-1/4 rounded-tr-lg bg-primary text-white p-4 shrink-0 flex flex-col gap-2">
   <ul class="flex flex-col grow gap-2 justify-between">
-    {{> contactItem itemValue=email itemIconClass="fa-at"}}
-    {{> contactItem itemValue=phone itemIconClass="fa-phone"}}
-    {{> contactItem itemValue=url itemIconClass="fa-globe"}}
-    <li class="flex">
-      <i class="fa-solid fa-location-dot text-secondary mr-3"></i>
-      <p class="flex flex-col">
-        {{#location}}
-          <span>{{address}}</span>
-          <span>{{postalCode}} {{city}}</span>
-          <span>{{countryCode}} {{region}}</span>
-        {{/location}}
-      </p>
-    </li>
+    {{#if email}}
+      {{> contactItem itemValue=email itemIconClass="fa-at"}}
+    {{/if}}
+    {{#if phone}}
+      {{> contactItem itemValue=phone itemIconClass="fa-phone"}}
+    {{/if}}
+    {{#if url}}
+      {{> contactItem itemValue=url itemIconClass="fa-globe"}}
+    {{/if}}
+    {{#if location}}
+      <li class="flex">
+        <i class="fa-solid fa-location-dot text-secondary mr-3"></i>
+        <p class="flex flex-col">
+          {{#location}}
+            <span>{{address}}</span>
+            <span>{{postalCode}} {{city}}</span>
+            <span>{{countryCode}} {{region}}</span>
+          {{/location}}
+        </p>
+      </li>
+    {{/if}}
     {{#each profiles}}
       {{#if (or (eq this.network "Twitter") (eq this.network "X")) }}
         {{setVar "iconClass" "fa-square-x-twitter"}}

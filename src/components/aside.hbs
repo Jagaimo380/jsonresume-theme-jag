@@ -1,26 +1,32 @@
 <aside class="w-1/4 shrink-0 bg-neutral p-4">
-  <section class="mb-4">
-    {{>category-title icons="fa-solid fa-screwdriver-wrench" label="Compétences"}}
-    <div class="flex flex-wrap gap-2">
-      {{#each resume.skills}}
-        {{>badge label=name shouldHaveCrown=(or (eq level "Master") (eq level "Expert"))}}
+  {{#if resume.skills}}
+    <section class="mb-4">
+      {{>category-title icons="fa-solid fa-screwdriver-wrench" label="Compétences"}}
+      <div class="flex flex-wrap gap-2">
+        {{#each resume.skills}}
+          {{>badge label=name shouldHaveCrown=(or (eq level "Master") (eq level "Expert"))}}
+        {{/each}}
+      </div>
+    </section>
+  {{/if}}
+  {{#if resume.education}}
+    <section class="mb-4">
+      {{>category-title icons="fa-solid fa-graduation-cap" label="Etudes"}}
+      {{#each resume.education}}
+        {{>experience-title label=studyType}}
+        {{>subtitle label=institution}}
+        {{>dates startDate=startDate endDate=endDate}}
       {{/each}}
-    </div>
-  </section>
-  <section class="mb-4">
-    {{>category-title icons="fa-solid fa-graduation-cap" label="Etudes"}}
-    {{#each resume.education}}
-      {{>experience-title label=studyType}}
-      {{>subtitle label=institution}}
-      {{>dates startDate=startDate endDate=endDate}}
-    {{/each}}
-  </section>
-  <section class="mb-4">
-    {{>category-title icons="fa-solid fa-chess-knight" label="Centres d'intérêt"}}
-    <div class="flex flex-wrap gap-2">
-      {{#each resume.interests}}
-        {{>badge label=name}}
-      {{/each}}
-    </div>
-  </section>
+    </section>
+  {{/if}}
+  {{#if resume.interests}}
+    <section class="mb-4">
+      {{>category-title icons="fa-solid fa-chess-knight" label="Centres d'intérêt"}}
+      <div class="flex flex-wrap gap-2">
+        {{#each resume.interests}}
+          {{>badge label=name}}
+        {{/each}}
+      </div>
+    </section>
+  {{/if}}
 </aside>
