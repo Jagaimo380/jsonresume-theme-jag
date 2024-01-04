@@ -1,0 +1,14 @@
+<section class="grow py-4 px-12">
+  <section class="mb-4">
+    {{>category-title icons="fa-regular fa-building" label="Expérience professionnelle"}}
+    {{#each resume.work}}
+      {{>experience title=position subtitle=name startDate=startDate endDate=endDate}}
+    {{/each}}
+  </section>
+  <section class="mb-4">
+    {{>category-title icons="fa-solid fa-handshake-angle" label="Bénévolat"}}
+    {{#each resume.volunteer}}
+      {{>experience title=position subtitle=organization startDate=startDate endDate=endDate}}
+    {{/each}}
+  </section>
+</section>

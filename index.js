@@ -6,8 +6,11 @@ const moment = require('moment');
 handlebars.registerHelper({
   removeProtocol: (url) => url.replace(/.*?:\/\//g, ''),
   concat: (...args) => args.filter((arg) => typeof arg !== 'object').join(''),
-  formatAddress: (...args) => args.filter((arg) => typeof arg !== 'object').join(' '),
-  formatDate: (date) => moment(date).format('MM/YYYY'),
+  formatDate: (str) => {
+    const date = moment(str);
+
+    return date.isValid() ? date.format('MM/YYYY') : str;
+  },
   lowercase: (s) => s.toLowerCase(),
   eq: (a, b) => a === b,
   or: (...args) => args.splice(0, args.length - 1).some(Boolean),

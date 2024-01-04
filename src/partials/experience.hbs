@@ -1,0 +1,10 @@
+<section class="my-4">
+  {{>experience-title label=title}}
+  {{>subtitle label=subtitle link="foo.bar"}}
+  {{>dates startDate=startDate endDate=endDate}}
+  <ul class="list-disc marker:text-secondary pl-5">
+    {{#each highlights as |highlight|}}
+      <li>{{highlight}}</li>
+    {{/each}}
+  </ul>
+</section>
