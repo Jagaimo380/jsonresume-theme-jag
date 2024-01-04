@@ -1,6 +1,11 @@
 <aside class="w-1/4 shrink-0 bg-neutral p-4">
   <section class="mb-4">
     {{>category-title icons="fa-solid fa-screwdriver-wrench" label="Compétences"}}
+    <div class="flex flex-wrap gap-2">
+      {{#each resume.skills}}
+        {{>badge label=name shouldHaveCrown=(or (eq level "Master") (eq level "Expert"))}}
+      {{/each}}
+    </div>
   </section>
   <section class="mb-4">
     {{>category-title icons="fa-solid fa-graduation-cap" label="Etudes"}}
