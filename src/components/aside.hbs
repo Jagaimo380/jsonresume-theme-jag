@@ -9,8 +9,18 @@
   </section>
   <section class="mb-4">
     {{>category-title icons="fa-solid fa-graduation-cap" label="Etudes"}}
+    {{#each resume.education}}
+      {{>experience-title label=studyType}}
+      {{>subtitle label=institution}}
+      {{>dates startDate=startDate endDate=endDate}}
+    {{/each}}
   </section>
   <section class="mb-4">
     {{>category-title icons="fa-solid fa-chess-knight" label="Centres d'intérêt"}}
+    <div class="flex flex-wrap gap-2">
+      {{#each resume.interests}}
+        {{>badge label=name}}
+      {{/each}}
+    </div>
   </section>
 </aside>
