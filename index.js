@@ -10,7 +10,7 @@ handlebars.registerHelper({
   formatDate: (date) => moment(date).format('MM/YYYY'),
   lowercase: (s) => s.toLowerCase(),
   eq: (a, b) => a === b,
-  or: (...args) => args.some(Boolean),
+  or: (...args) => args.splice(0, args.length - 1).some(Boolean),
   setVar: function (name, value) {
     this[name] = value;
   },
