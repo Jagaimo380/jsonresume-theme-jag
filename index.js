@@ -9,7 +9,7 @@ handlebars.registerHelper({
   formatDate: (str) => {
     const date = moment(str);
 
-    return date.isValid() ? date.format('MM/YYYY') : str;
+    return !date.isValid() || /^\d{4}$/.test(str) ? str : date.format('MM/YYYY');
   },
   lowercase: (s) => s.toLowerCase(),
   eq: (a, b) => a === b,
