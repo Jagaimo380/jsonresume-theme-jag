@@ -21,6 +21,19 @@
       {{/each}}
     </section>
   {{/if}}
+  {{#if resume.languages}}
+    <section class="mb-6">
+      {{>category-title icons="fa-solid fa-language" label="Langues"}}
+      <div class="flex flex-col gap-2">
+        {{#each resume.languages}}
+          <div class="mb-4">
+            {{>experience-title label=language}}
+            {{>subtitle label=fluency}}
+          </div>
+        {{/each}}
+      </div>
+    </section>
+  {{/if}}
   {{#if resume.interests}}
     <section>
       {{>category-title icons="fa-solid fa-chess-knight" label="Centres d'intérêt"}}
