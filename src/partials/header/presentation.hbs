@@ -1,17 +1,17 @@
 <div class="rounded-l-lg bg-neutral grow flex">
-  <div class="self-center flex gap-8 p-8">
+  <div class="flex gap-8 p-8">
     {{#if image}}
     <div class="w-36 h-36 rounded-l-[4.5rem] rounded-tr-[4.5rem] rounded-br-2xl border-8 border-secondary shrink-0 truncate">
         <img src="{{image}}" alt="profile-pic">
     </div>
     {{/if}}
     <div class="grow">
-      <h1 class="text-primary text-4xl">{{name}}</h1>
+      <h1 class="text-primary capitalize font-medium text-4xl">{{name}}</h1>
       {{#if label}}
-        <h2 class="text-secondary text-2xl">{{label}}</h2>
+        <h2 class="text-secondary capitalize text-xl mb-2">{{label}}</h2>
       {{/if}}
       {{#if summary}}
-        <p class="text-justify">{{summary}}</p>
+        <p class="text-justify whitespace-pre-line">{{summary}}</p>
       {{/if}}
     </div>
   </div>

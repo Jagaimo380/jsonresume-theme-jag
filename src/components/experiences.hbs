@@ -1,14 +1,14 @@
 <section class="grow py-4 px-12">
   {{#if resume.work}}
-    <section class="mb-4">
+    <section class="mb-8">
       {{>category-title icons="fa-regular fa-building" label="Expérience professionnelle"}}
       {{#each resume.work}}
-        {{>experience title=position subtitle=name startDate=startDate endDate=endDate}}
+        {{>experience title=position subtitle=name link=url startDate=startDate endDate=endDate}}
       {{/each}}
     </section>
   {{/if}}
   {{#if resume.volunteer}}
-    <section class="mb-4">
+    <section>
       {{>category-title icons="fa-solid fa-handshake-angle" label="Bénévolat"}}
       {{#each resume.volunteer}}
         {{>experience title=position subtitle=organization startDate=startDate endDate=endDate}}

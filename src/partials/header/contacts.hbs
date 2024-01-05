@@ -1,9 +1,9 @@
 {{#*inline "contactItem"}}
-  <li><i class="fa-solid {{itemIconClass}} text-secondary mr-3"></i>{{itemValue}}</li>
+  <li class="flex items-center"><i class="fa-solid {{itemIconClass}} text-secondary mr-3"></i><span>{{itemValue}}</span></li>
 {{/inline}}
 
-<div class="w-1/4 rounded-tr-lg bg-primary text-white p-4 shrink-0 flex flex-col gap-2">
-  <ul class="flex flex-col grow gap-2 justify-between">
+<div class="w-[30%] rounded-tr-lg bg-primary text-white p-4 shrink-0 flex flex-col gap-2">
+  <ul class="flex flex-col grow gap-4 justify-center">
     {{#if email}}
       {{> contactItem itemValue=email itemIconClass="fa-at"}}
     {{/if}}
@@ -14,7 +14,7 @@
       {{> contactItem itemValue=url itemIconClass="fa-globe"}}
     {{/if}}
     {{#if location}}
-      <li class="flex">
+      <li class="flex items-center">
         <i class="fa-solid fa-location-dot text-secondary mr-3"></i>
         <p class="flex flex-col">
           {{#location}}
@@ -38,7 +38,7 @@
       {{#if (eq this.network "Github") }}
         {{setVar "iconClass" "fa-github"}}
       {{/if}}
-      <li>
+      <li class="flex items-center">
         <a target="_blank" href="{{this.url}}" class="hover:underline"><i
           class="fa-brands {{iconClass}} text-secondary mr-3"></i>{{this.username}}</a>
       </li>

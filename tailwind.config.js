@@ -12,8 +12,8 @@ module.exports = {
         neutral: '#EBEBEB',
       },
       spacing: {
-        wa4: '1170px',
-        ha4: '1655px',
+        wa4: '1053px',
+        ha4: '1490px',
       },
     },
   },
