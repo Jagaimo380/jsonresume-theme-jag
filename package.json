@@ -3,8 +3,14 @@
   "version": "0.0.1",
   "description": "Simple theme for JSON Resume.",
   "scripts": {
-    "serve": "resume serve --theme .",
     "tailwind:watch": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --watch",
+    "tailwind:build" : "npx tailwindcss -i ./src/style.css -o ./dist/style.css",
+    "preserve" : "npm run tailwind:build",
+    "serve": "resume serve --theme .",
+    "preexport": "npm run tailwind:build",
+    "export" : "resume export dist/index.html --theme .",
+    "preprint": "npm run export",
+    "print": "puppeteer --wait-until networkidle0 --margin-top \"4mm\" --margin-right \"4mm\" --margin-bottom \"4mm\" --margin-left \"4mm\" --format A4 print dist/index.html dist/resume.pdf",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
