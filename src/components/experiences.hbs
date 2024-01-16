@@ -3,7 +3,7 @@
     <section class="mb-8">
       {{>category-title icons="fa-regular fa-building" label="Expérience professionnelle"}}
       {{#each resume.work}}
-        {{>experience title=position subtitle=name link=url startDate=startDate endDate=endDate}}
+        {{>experience title=position summary=summary subtitle=name link=url startDate=startDate endDate=endDate}}
       {{/each}}
     </section>
   {{/if}}

@@ -1,7 +1,8 @@
-<section class="mb-8">
+<section class="mb-8 print:break-inside-avoid-page">
   {{>experience-title label=title}}
   {{>subtitle label=subtitle link=link}}
   {{>dates startDate=startDate endDate=endDate}}
+  <p class="mt-3 whitespace-pre-line"><i class="fa-solid fa-chevron-right fa-xl text-secondary mr-2"></i>{{summary}}</p>
   <ul class="list-disc marker:text-secondary pl-5 mt-2">
     {{#each highlights as |highlight|}}
       <li class="mb-1.5 leading-[1.4rem] whitespace-pre-line">{{highlight}}</li>
